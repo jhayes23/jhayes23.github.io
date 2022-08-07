@@ -14,11 +14,14 @@ h1{
 #content{
     max-width: 1080px;
     height: 95%;
-    margin-left: 50px;
+    margin: auto;
+    /*margin-left: 50px;*/
     display: grid;
     grid-template-areas:
-            "about-me picture";
+            "about-me picture
+            "socials socials";
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: 3fr 1fr;
     grid-gap: 33px;
 }
 #about-me{
@@ -26,6 +29,9 @@ h1{
 }
 #picture{
     border-radius: 25px ;
+}
+#socials{
+    grid-area: socials;
 }
 #footer{
     position: fixed;
