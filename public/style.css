@@ -1,0 +1,97 @@
+body{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    max-height: 80vh;
+    height: 90vh;
+}
+
+#name {
+    grid-area: name;
+    padding-left: 30px;
+    height: 10%;
+    margin-top: 10vh;
+    margin-left: 50px;
+}
+.bold-name{
+    font-weight: 700 !important;
+}
+
+#content {
+    max-width: 1080px;
+    height: 95%;
+    margin: auto;
+    /*margin-left: 50px;*/
+    display: grid;
+    grid-template-areas:
+            "name name"
+            "about-me picture"
+            "socials socials"
+            "projects projects";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows:  1fr 3fr 1fr 3fr;
+    grid-gap: 33px;
+}
+h1{
+    font-weight: 300;
+    font-size: 4rem;
+}
+#about-me {
+    grid-area: about-me;
+    padding-left: 10px;
+    font-size: 1.5rem;
+    line-height: 150%;
+}
+
+#picture {
+    border-radius: 28px;
+    border: thick ridge olivedrab;
+    box-shadow: 5px 5px 5px gray;
+    margin: auto;
+    width: 80%;
+    height: auto;
+    min-width: 316px;
+}
+
+#socials {
+    grid-area: socials;
+    text-align: center;
+    width: 100%;
+    height: auto;
+}
+a{
+    color: inherit;
+}
+#projects{
+    grid-area: projects;
+    margin: auto;
+}
+#footer {
+    position: fixed;
+    font-size: .85rem;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #424242;
+    color: white;
+    width: 100%;
+    text-align: center;
+}
+
+@media only screen and (max-width: 705px){
+    #content{
+        display: block;
+
+    }
+    #picture{
+        margin-left: 56px;
+        margin-top: 16px;
+        border-radius: 28px;
+
+    }
+    h1{
+        font-size: 3.5em;
+        margin-left: 35px;
+
+    }
+
+}
